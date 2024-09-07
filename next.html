@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./media.css">
+    <title>Natijalar</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Natijalar</h2>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Ma'lumotlarni olish
+        const word = localStorage.getItem('word');
+        const num = parseInt(localStorage.getItem('num'));
+
+        // Ma'lumotlarni chiqarish
+        let output = '';
+        if (!isNaN(num) && word) {
+            for (let i = 0; i < num; i++) {
+                output += word + "<br>";
+            }
+        }
+        document.getElementById('output').innerHTML = output;
+    </script>
+</body>
+</html>
